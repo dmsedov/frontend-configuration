@@ -1,0 +1,146 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyForm 1`] = `
+<form>
+  <div
+    class="form-row"
+  >
+    <div
+      class="form-group col-md-6"
+    >
+      <label
+        class="col-form-label"
+        for="inputEmail4"
+      >
+        Email
+      </label>
+      <input
+        class="form-control"
+        id="inputEmail4"
+        placeholder="Email"
+        type="email"
+        value=""
+      />
+    </div>
+    <div
+      class="form-group col-md-6"
+    >
+      <label
+        class="col-form-label"
+        for="inputPassword4"
+      >
+        Password
+      </label>
+      <input
+        class="form-control"
+        id="inputPassword4"
+        placeholder="Password"
+        type="password"
+        value=""
+      />
+    </div>
+  </div>
+  <div
+    class="form-group"
+  >
+    <label
+      class="col-form-label"
+      for="inputAddress"
+    >
+      Address
+    </label>
+    <textarea
+      class="form-control"
+      id="inputAddress"
+      placeholder="1234 Main St"
+      type="text"
+    />
+  </div>
+  <div
+    class="form-row"
+  >
+    <div
+      class="form-group col-md-6"
+    >
+      <label
+        class="col-form-label"
+        for="inputCity"
+      >
+        City
+      </label>
+      <input
+        class="form-control"
+        id="inputCity"
+        type="text"
+        value=""
+      />
+    </div>
+    <div
+      class="form-group col-md-6"
+    >
+      <label
+        class="col-form-label"
+        for="inputCountry"
+      >
+        Country
+      </label>
+      <select
+        class="form-control"
+        id="inputCountry"
+      >
+        <option>
+          Choose
+        </option>
+        <option
+          value="argentina"
+        >
+          Argentina
+        </option>
+        <option
+          value="russia"
+        >
+          Russia
+        </option>
+        <option
+          value="china"
+        >
+          China
+        </option>
+      </select>
+    </div>
+  </div>
+  <div
+    class="form-group"
+  >
+    <div
+      class="form-check"
+    >
+      <label
+        class="form-check-label"
+        for="rules"
+      >
+        <input
+          class="form-check-input"
+          id="rules"
+          type="checkbox"
+        />
+        Accept Rules
+      </label>
+    </div>
+  </div>
+  <button
+    class="btn btn-primary"
+    type="submit"
+  >
+    Sign in
+  </button>
+</form>
+`;
+
+exports[`MyForm 2`] = `
+<a
+  href="#"
+>
+  Back
+</a>
+`;
