@@ -25,9 +25,13 @@ export default class Form extends React.Component {
   }
 
   handleChangePassword = this.handleChangeField.bind(null, 'password');
+
   handleChangeEmail = this.handleChangeField.bind(null, 'email');
+
   handleChangeAddress = this.handleChangeField.bind(null, 'address');
+
   handleChangeCity = this.handleChangeField.bind(null, 'city');
+
   handleChangeCountry = this.handleChangeField.bind(null, 'country');
 
   handleBackToForm = (e) => {
@@ -97,7 +101,8 @@ export default class Form extends React.Component {
         <div className="form-group">
           <div className="form-check">
             <label className="form-check-label" htmlFor="rules">
-              <input id="rules" className="form-check-input" onChange={this.handleChangeAcceptRules} type="checkbox" checked={form.acceptRules} /> Accept Rules
+              <input id="rules" className="form-check-input" onChange={this.handleChangeAcceptRules} type="checkbox" checked={form.acceptRules} />
+              Accept Rules
             </label>
           </div>
         </div>
