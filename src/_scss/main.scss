@@ -7,10 +7,14 @@ body {
   }
 
   main {
-    
+
   }
 
   footer {
 
   }
+  @media (max-width: 992px) {
+    font-size: 12px;
+  }
 }
+@import "accessForm.scss";

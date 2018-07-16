@@ -1,0 +1,22 @@
+$basisWidth: 50%;
+
+.access-form {
+  flex-basis: 80%;
+    @media (max-width: 992px) {
+      flex-basis: 100%;
+    }
+}
+
+.user-rights-fields {
+  .user-name {
+    flex-basis: $basisWidth;
+  }
+
+  .user-rights {
+    flex-basis: 0.5 * $basisWidth;
+  }
+
+  .delete-user {
+    flex-basis: 0.5 * $basisWidth;
+  }
+}

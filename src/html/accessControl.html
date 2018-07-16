@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <body>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+      Запустить модальное окно
+    </button><br><br>
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body d-flex justify-content-center">
+            <form class="access-form d-flex flex-column" id="access-user-form">
+              <div class="user-rights-fields d-flex justify-content-around">
+                <div class="form-check-inline user-name"><span>Пользователь</span></div>
+                <div class="user-rights">
+                    <span>Чтение</span>
+                </div>
+                <div class="user-rights">
+                    <span>Запись и чтение</span>
+                </div>
+                <div class="delete-user">Удалить пользователя</div>
+              </div>
+              <div class="form-check form-check-inline user-rights-fields d-flex justify-content-around">
+                <label class="form-check-label user-name">Петя</label>
+                <input class="form-check-input user-rights" type="radio" name="Петя" value="r" checked>
+                <input class="form-check-input user-rights" type="radio" name="Петя" value="rw">
+                <button type="button del-user" class="delete-user">Удалить</button>
+              </div>
+              <div class="form-check form-check-inline user-rights-fields d-flex">
+                <label class="form-check-label">Дима</label>
+                <input class="form-check-input" type="radio" name="Дима" value="r" checked>
+                <input class="form-check-input" type="radio" name="Дима" value="rw">
+                <button type="button delete-user" class="delete-user">Удалить</button>
+              </div>
+              <div class="form-check form-check-inline user-rights-fields d-flex ">
+                <label class="form-check-label">Женя</label>
+                <input class="form-check-input" type="radio" name="Женя" value="r" checked>
+                <input class="form-check-input" type="radio" name="Женя" value="rw">
+                <button type="button del-user" class="delete-user">Удалить</button>
+              </div>
+              <div class="form-controls">
+                <button type="submit" class="btn btn-primary">Сохранить</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  </html>
