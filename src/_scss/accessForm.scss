@@ -1,22 +1,50 @@
-$basisWidth: 50%;
+$basisWidth: 100%;
+#access-control {
+  .modal-header {
+    h5 {
+      text-align: center;
+    }
+    button {
+      @media (max-width: 992px) {
+        float: none;
+      }
+    }
+  }
+  .modal-body {
+    @media (max-width: 992px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
 
 .access-form {
-  flex-basis: 80%;
+  padding: 1rem 1.5rem 1rem;
+  flex-basis: 0.9 * $basisWidth;
     @media (max-width: 992px) {
-      flex-basis: 100%;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      flex-basis: $basisWidth;
+      font-size: 0.8rem;
     }
+  .form-check-inline {
+    margin-right: 0;
+  }
 }
 
 .user-rights-fields {
-  .user-name {
-    flex-basis: $basisWidth;
+  .user-name, .user-rights, .act-delete-user {
+    padding: 0.5rem;
+    width: 0.25 * $basisWidth;
+    text-align: center;
+      @media (max-width: 992px) {
+        padding-left: 0;
+        padding-right: 0;
+        box-sizing: border-box;
+      }
   }
+}
 
-  .user-rights {
-    flex-basis: 0.5 * $basisWidth;
-  }
-
-  .delete-user {
-    flex-basis: 0.5 * $basisWidth;
-  }
+.form-controls {
+  margin-top: 1.5rem;
 }
