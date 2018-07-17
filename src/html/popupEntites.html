@@ -5,7 +5,7 @@
   </head>
   <body>
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#access-control">
-      Запустить модальное окно
+      Запустить модальное окно Access contol form
     </button><br><br>
     <div class="modal fade" id="access-control" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -75,5 +75,46 @@
         </div>
       </div>
     </div>
+    <br>
+    <br>
+    <br>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#entry-link">
+      Запустить модальное окно Copy link to buffer
+    </button>
+    <br>
+    <br>
+    <div id="entry-link" class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Данные для доступа</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p class="description">Нажмите "Скопировать" для копирования ссылки в буфер</p>
+            <input type="text" name="entryLink" readonly>
+            <button type="button" class="btn btn-primary btn-sm">Скопировать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div style="display:flex;justify-content: center;">
+      <div class="auth-form">
+        <h2>Авторизация</h2>
+        <p class="auth-tip">Авторизуйтесь через представленные ниже сервисы:</p>
+        <ul class="list-sm">
+          <li class="auth-service">
+            <a class="btn vk-sm"href="#">Вконтакте</a>
+          </li>
+          <li class="auth-service">
+            <a class="btn google-sm" href="#">Google</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </body>
-  </html>
+</html>

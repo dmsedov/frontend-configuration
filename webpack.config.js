@@ -43,7 +43,7 @@ const config = {
       chunkFilename: '[id].css',
     }),
     new HtmlWebpackPlugin({
-      template: './src/html/accessControl.html',
+      template: './src/html/popupEntites.html',
     }),
   ],
   optimization: isProduction ? {
