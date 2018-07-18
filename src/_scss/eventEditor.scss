@@ -1,0 +1,82 @@
+#editor {
+  .modal {
+    padding-right: 0px!important;
+  }
+
+  .modal.show {
+    padding-right: 0px!important;
+  }
+
+  .modal-dialog {
+    margin: 0;
+    width: 100%;
+    @media (min-width: 576px) {
+      max-width: none!important;
+    }
+
+    .modal-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .modal-header {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .modal-body {
+      display: flex;
+      width: 95%;
+      @media (max-width: 992px) {
+        flex-direction: column-reverse;
+      }
+      @media (min-width: 468px) {
+        width: 80%;
+        justify-content: center;
+      }
+    }
+    .event-form {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 0.7;
+      .controls {
+        margin-bottom: 0.5rem;
+      }
+      .event-content {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 0.3;
+      }
+    }
+    .authors {
+      padding: 0.5rem;
+      @media (max-width: 992px) {
+        margin-bottom: 1rem;
+      }
+
+      .authors-list {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 992px) {
+          flex-direction: row;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          align-items: center;
+        }
+        li {
+          padding: 0.4rem;
+          text-align: center;
+          list-style-type: none;
+        }
+      }
+    }
+  }
+  .modal-backdrop.show {
+    display: none!important;
+  }
+
+}

@@ -116,5 +116,43 @@
         </ul>
       </div>
     </div>
+    <br><br><br>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editor">
+      Запустить модальное окно Event editor form
+    </button><br><br>
+    <div class="modal show" id="editor" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="display:block;"> <!--class="show" style="display:block" для отображения модального окна-->
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="event">Событие</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="event-form">
+              <div class="controls">
+                <button type="submit" class="btn btn-primary btn-sm">Сохранить и закрыть</button>
+                <button type="button" class="btn btn-primary btn-sm">Удалить</button>
+              </div>
+              <div class="event-content">
+                <input class="name-field" type="text" name="name" placeholder="Событие">
+                <input class="place-field" type="text" name="place" placeholder="Место">
+                <textarea class="description-field" name="text" rows="20" placeholder="Описание"></textarea>
+              </div>
+            </form>
+            <div class="authors">
+              <h5>Авторы</h5>
+              <ul class="authors-list">
+                <li>Дмитрий Седов</li>
+                <li>Василий Пупкин</li>
+                <li>Яков Останин</li>
+                <li>Артемий Хованский</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
