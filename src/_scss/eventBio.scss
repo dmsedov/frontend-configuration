@@ -1,0 +1,26 @@
+#event-bio {
+  .events {
+    position: relative;
+    font-size: 1rem;
+
+    .events-list {
+      margin: 0;
+      padding: 0;
+      height: 160px;
+      overflow-y: scroll;
+      li {
+        padding: 0.2rem;
+        width: 95%;
+        border-bottom: 1px solid silver;
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+
+  }
+  .modal-footer {
+    justify-content: flex-start;
+  }
+}

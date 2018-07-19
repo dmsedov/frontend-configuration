@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
-  <body class="modal-open">
+  <body>
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#access-control">
       Запустить модальное окно Access contol form
     </button><br><br>
@@ -120,7 +120,7 @@
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editor">
       Запустить модальное окно Event editor form
     </button><br><br>
-    <div class="modal show" id="editor" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="display:block;"> <!--class="show" style="display:block" для отображения модального окна; в тег body необходим класс "modal-open" для прокрутки содержимого окна-->
+    <div class="modal" id="editor" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"> <!--class="show" style="display:block" для отображения модального окна; в тег body необходим класс "modal-open" для прокрутки содержимого окна-->
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -154,5 +154,57 @@
         </div>
       </div>
     </div>
+    <br>
+    <br>
+    <br>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#event-bio">
+  Запустить Event-bio
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="event-bio" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Дата <span>4 июля 2018 г.<span></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="events">
+          <ul class="events-list">
+            <li><a href="#">Событие 1</a></li>
+            <li><a href="#">Событие 2</a></li>
+            <li><a href="#">Событие 3</a></li>
+            <li><a href="#">Событие 4</a></li>
+            <li><a href="#">Событие 5</a></li> <!--если < 5 событий overflow-y:hidden иначе scroll -->
+            <li><a href="#">Событие 6</a></li>
+            <li><a href="#">Событие 7</a></li>
+            <li><a href="#">Событие 8</a></li>
+            <li><a href="#">Событие 9</a></li>
+            <li><a href="#">Событие 10</a></li>
+            <li><a href="#">Событие 11</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Создать событие</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="container">
+  <header>
+    <nav class="nav-bar"></nav>
+  </header>
+  <main>
+    <div class="calendar" style=>
+    </div>
+  </main>
+  <div></div>
+</div>
   </body>
 </html>
