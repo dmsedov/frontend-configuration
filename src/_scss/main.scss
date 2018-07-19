@@ -3,6 +3,13 @@
 body {
 
   header {
+    height: 3.5rem;
+    .menu-position {
+      position: fixed;
+      width: 100%;
+      height: inherit;
+      z-index: 1500;
+    }
 
   }
 
