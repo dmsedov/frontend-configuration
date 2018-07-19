@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
-  <body>
+  <body class="modal-open">
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#access-control">
       Запустить модальное окно Access contol form
     </button><br><br>
@@ -120,7 +120,7 @@
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editor">
       Запустить модальное окно Event editor form
     </button><br><br>
-    <div class="modal show" id="editor" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="display:block;"> <!--class="show" style="display:block" для отображения модального окна-->
+    <div class="modal show" id="editor" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="display:block;"> <!--class="show" style="display:block" для отображения модального окна; в тег body необходим класс "modal-open" для прокрутки содержимого окна-->
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
