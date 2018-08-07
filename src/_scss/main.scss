@@ -4,6 +4,11 @@ body {
 
   header {
     height: 3.5rem;
+    .search {
+      width: 32px;
+      height:32px;
+
+    }
     .menu-position {
       position: fixed;
       width: 100%;
@@ -14,9 +19,13 @@ body {
   }
 
   main {
-    display: flex;
-    justify-content: center;
     .calendar {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .days {
       display: flex;
       width: 90%;
       @media (max-width: 667px) {
@@ -27,8 +36,37 @@ body {
         flex-wrap: wrap;
       }
     }
+    .controls {
+      margin: 2rem 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 300px;
+      .nav-arrow {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        &.left {
+          background: url(/src/images/icons/left-arrow.png) no-repeat 0 0;
+        }
+        &.right {
+          background: url(/src/images/icons/right-arrow.png) no-repeat 0 0;
+        }
+      }
+      .date {
+        font-size: 1.2rem;
+      }
+      .add-event-btn {
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        right: 2%;
+        bottom: 5%;
+        background: url(/src/images/icons/add-event-btn.png) no-repeat 0 0;
+      }
+    }
     .day {
-      width: 90%;
+      width: 80%;
       height: 200px;
       border: 1px solid black;
       @media (max-width: 667px) {
@@ -41,8 +79,9 @@ body {
   }
 
   footer {
-
+    height: 20vh;
   }
+
   @media (max-width: 992px) {
     font-size: 12px;
   }
