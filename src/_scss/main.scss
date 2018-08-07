@@ -4,18 +4,29 @@ body {
 
   header {
     height: 3.5rem;
-    .search {
-      width: 32px;
-      height:32px;
-
-    }
     .menu-position {
       position: fixed;
       width: 100%;
       height: inherit;
       z-index: 1500;
+      .navbar-expand-lg {
+        position: relative;
+      }
+      .search {
+        position: absolute;
+        top: 0.6rem;
+        right: 6rem;
+        width: 32px;
+        height:32px;
+        background-image: url(/src/images/icons/search.png);
+      }
+      .modal {
+        z-index: 1600;
+      }
+      .modal-content {
+        top: 3.5rem;
+      }
     }
-
   }
 
   main {
@@ -24,17 +35,6 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
-    }
-    .days {
-      display: flex;
-      width: 90%;
-      @media (max-width: 667px) {
-        flex-direction: column;
-        align-items: center;
-      }
-      @media (min-width: 668px) {
-        flex-wrap: wrap;
-      }
     }
     .controls {
       margin: 2rem 0;
@@ -47,10 +47,10 @@ body {
         height: 40px;
         cursor: pointer;
         &.left {
-          background: url(/src/images/icons/left-arrow.png) no-repeat 0 0;
+          background-image: url(/src/images/icons/left-arrow.png);
         }
         &.right {
-          background: url(/src/images/icons/right-arrow.png) no-repeat 0 0;
+          background-image: url(/src/images/icons/right-arrow.png);
         }
       }
       .date {
@@ -62,18 +62,62 @@ body {
         height: 50px;
         right: 2%;
         bottom: 5%;
-        background: url(/src/images/icons/add-event-btn.png) no-repeat 0 0;
+        cursor: pointer;
+        background: url(/src/images/icons/add-event-btn.png);
+        z-index: 1500;
+      }
+    }
+    .days {
+      display: flex;
+      width: 90%;
+      flex-wrap: wrap;
+      @media (max-width: 667px) {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
       }
     }
     .day {
+      position: relative;
+      padding: 1rem;
+      padding-left: 4rem;
+      display: flex;
+      justify-content: center;
       width: 80%;
       height: 200px;
-      border: 1px solid black;
+      font-size: 12px;
+      border: 1px solid silver;
       @media (max-width: 667px) {
         height: 300px;
+        font-size: 1rem;
       }
       @media (min-width: 668px) {
         width: 200px;
+      }
+      .day-of-week {
+        position: absolute;
+        top: 0rem;
+        left: 0.2rem;
+        .number {
+          display: block;
+          font-size: 2rem;
+          &.active {
+            color: red;
+          }
+        }
+        .name {
+          display: block;
+          font-size: 1rem;
+        }
+      }
+      .content {
+        padding-left: 1rem;
+        height: 90%;
+        overflow-y: hidden;
+        .events {
+          margin: 0;
+          padding: 0;
+        }
       }
     }
   }
@@ -85,8 +129,9 @@ body {
   @media (max-width: 992px) {
     font-size: 12px;
   }
+
+  @import "authForm.scss";
+  @import "accessForm.scss";
+  @import "eventEditor.scss";
+  @import "eventBio.scss";
 }
-@import "authForm.scss";
-@import "accessForm.scss";
-@import "eventEditor.scss";
-@import "eventBio.scss";
