@@ -15,10 +15,13 @@ const config = {
       test: /\.html$/,
       use: 'html-loader',
     }, {
-      test: /\.js$/,
+      test: /\.jsx?$/,
       exclude: /node_modules/,
       use: [{
         loader: 'babel-loader',
+        options: {
+          presets: ['react'],
+        },
       }],
     }, {
       test: /\.scss$/,
