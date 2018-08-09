@@ -18,12 +18,6 @@ export default class Form extends React.Component {
     this.setState({ form: { ...form, [fieldName]: value } });
   }
 
-  handleChangeAcceptRules = () => {
-    const { form } = this.state;
-    const value = form.acceptRules;
-    this.setState({ form: { ...form, acceptRules: !value } });
-  }
-
   handleChangePassword = this.handleChangeField.bind(null, 'password');
 
   handleChangeEmail = this.handleChangeField.bind(null, 'email');
@@ -34,6 +28,12 @@ export default class Form extends React.Component {
 
   handleChangeCountry = this.handleChangeField.bind(null, 'country');
 
+  handleChangeAcceptRules = () => {
+    const { form } = this.state;
+    const value = form.acceptRules;
+    this.setState({ form: { ...form, acceptRules: !value } });
+  }
+
   handleBackToForm = (e) => {
     e.preventDefault();
     this.setState({ submitted: false });
@@ -42,10 +42,6 @@ export default class Form extends React.Component {
   handleSubmitForm = (e) => {
     e.preventDefault();
     this.setState({ submitted: true });
-  }
-
-  render() {
-    return this.state.submitted ? this.renderResult() : this.renderForm();
   }
 
   renderResult() {
@@ -70,13 +66,25 @@ export default class Form extends React.Component {
         <div className="form-row">
           <div className="form-group col-md-6">
             <label htmlFor="inputEmail4" className="col-form-label">Email</label>
-            <input type="email" onChange={this.handleChangeEmail} value={form.email}
-              className="form-control" id="inputEmail4" placeholder="Email" />
+            <input
+              type="email"
+              onChange={this.handleChangeEmail}
+              value={form.email}
+              className="form-control"
+              id="inputEmail4"
+              placeholder="Email"
+            />
           </div>
           <div className="form-group col-md-6">
             <label htmlFor="inputPassword4" className="col-form-label">Password</label>
-            <input type="password" onChange={this.handleChangePassword} value={form.password}
-              className="form-control" id="inputPassword4" placeholder="Password" />
+            <input
+              type="password"
+              onChange={this.handleChangePassword}
+              value={form.password}
+              className="form-control"
+              id="inputPassword4"
+              placeholder="Password"
+            />
           </div>
         </div>
         <div className="form-group">
@@ -110,4 +118,8 @@ export default class Form extends React.Component {
       </form>
     );
   }
-};
+
+  render() {
+    return this.state.submitted ? this.renderResult() : this.renderForm();
+  }
+}

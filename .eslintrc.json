@@ -6,11 +6,40 @@
   },
   "parser": "babel-eslint",
   "parserOptions": {
-    "ecmaVersion": 2017,
-    "sourceType": "module"
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
-  "extends": "airbnb",
+  "extends": [
+    "airbnb"
+  ],
+  "plugins": [
+    "react",
+    "jsx-a11y"
+  ],
   "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "import/extensions": [{
+      "jsx": "always"
+    }],
+    "react/sort-comp": [1, {
+      "order": [
+        "lifecycle",
+        "static-methods",
+        "everything-else",
+        "rendering"
+      ],
+      "groups": {
+        "rendering": [
+          "/^render.+$/",
+          "render"
+        ]
+      }
+    }],
+    "react/destructuring-assignment": "warn",
+    "react/jsx-one-expression-per-line": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/label-has-for": "off"
   }
 }
