@@ -21,7 +21,7 @@
   ],
   "rules": {
     "import/extensions": [{
-      "jsx": "always"
+      "jsx": "none"
     }],
     "react/sort-comp": [1, {
       "order": [

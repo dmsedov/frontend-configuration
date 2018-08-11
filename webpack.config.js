@@ -70,6 +70,9 @@ const config = {
       }),
     ],
   } : {},
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   devServer: {
     port: 3000,
     compress: true,
