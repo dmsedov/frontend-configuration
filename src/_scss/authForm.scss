@@ -5,46 +5,50 @@
   h2 {
     text-align: center;
   }
-  p.auth-tip {
+
+  .auth-tip {
     padding: 0.5rem;
     text-align: center;
   }
-  ul.list-sm {
-    margin: 0;
-    padding: 0;
+
+  .list-sm {
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
   }
+
   li.auth-service {
     display: flex;
     justify-content: center;
     list-style-type: none;
-    a.btn {
+
+    .btn {
       position: relative;
       margin-bottom: 0.5rem;
       width: 12rem;
       height: 40px;
-      color: black;
+      color: $black;
       text-align: center;
-      border: 1px solid silver;
+      border: 1px solid $silver;
+
+      &::before {
+        position: absolute;
+        left: 10%;
+        top: 5%;
+      }
     }
 
-    a.btn::before {
-      position: absolute;
-      left: 10%;
-      top: 5%;
+    .btn.vk-sm {
+      &::before {
+        content: url('/src/images/icons/vk-32px.png');
+      }
     }
 
-    a.btn.vk-sm::before {
-      content: url(/src/images/icons/vk-32px.png);
-    }
-
-    a.btn.google-sm::before {
-      content: url(/src/images/icons/google-32px.png);
+    .btn.google-sm {
+      &::before {
+        content: url('/src/images/icons/google-32px.png');
+      }
     }
   }
-
-  // .btn {
-  //
-  // }
 }
