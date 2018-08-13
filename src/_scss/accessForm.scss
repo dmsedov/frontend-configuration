@@ -53,6 +53,16 @@ $basisWidth: 100%;
   }
 }
 
+.user-rights {
+  label {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    background-color: blue;
+  }
+  }
+
 .form-controls {
   margin-top: 1.5rem;
 }
