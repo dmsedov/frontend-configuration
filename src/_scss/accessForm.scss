@@ -15,8 +15,8 @@ $basisWidth: 100%;
 
   .modal-body {
     @media (max-width: 992px) {
-      padding-left: 0;
       padding-right: 0;
+      padding-left: 0;
     }
   }
 }
@@ -27,10 +27,11 @@ $basisWidth: 100%;
 
   @media (max-width: 992px) {
     flex-basis: $basisWidth;
-    padding-left: 0.5rem;
     padding-right: 0.5rem;
+    padding-left: 0.5rem;
     font-size: 0.8rem;
   }
+
   .form-check-inline {
     margin-right: 0;
   }
@@ -45,8 +46,8 @@ $basisWidth: 100%;
     text-align: center;
 
     @media (max-width: 992px) {
-      padding-left: 0;
       padding-right: 0;
+      padding-left: 0;
       box-sizing: border-box;
     }
   }
@@ -58,18 +59,18 @@ $basisWidth: 100%;
     display: inline-block;
     width: 18px;
     height: 18px;
-    box-sizing: border-box;
-    border-radius: 9px;
     background-color: $white;
     border: 4px solid $blue;
+    border-radius: 9px;
+    box-sizing: border-box;
 
     .checked {
       position: absolute;
       left: 0;
       width: 10px;
       height: 10px;
-      border-radius: 5px;
       background-color: $silver;
+      border-radius: 5px;
     }
   }
 

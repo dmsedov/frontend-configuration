@@ -17,7 +17,7 @@ header {
     top: 0.6rem;
     right: 6rem;
     width: 32px;
-    height:32px;
+    height: 32px;
     background-image: url('/src/images/icons/search.png');
   }
 
@@ -39,10 +39,10 @@ main {
   }
 
   .controls {
-    margin: 2rem 0;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
+    margin: 2rem 0;
     width: 300px;
 
     .nav-arrow {
@@ -65,20 +65,20 @@ main {
 
     .add-event-btn {
       position: fixed;
-      width: 50px;
-      height: 50px;
       right: 2%;
       bottom: 5%;
-      cursor: pointer;
+      width: 50px;
+      height: 50px;
       background: url('/src/images/icons/add-event-btn.png');
+      cursor: pointer;
       z-index: 1500;
     }
   }
 
   .days {
     display: flex;
-    width: 90%;
     flex-wrap: wrap;
+    width: 90%;
     @media (max-width: 667px) {
       flex-direction: column;
       align-items: center;
@@ -88,10 +88,10 @@ main {
 
   .day {
     position: relative;
-    padding: 1rem;
-    padding-left: 4rem;
     display: flex;
     justify-content: center;
+    padding: 1rem;
+    padding-left: 4rem;
     width: 80%;
     height: 200px;
     font-size: 12px;

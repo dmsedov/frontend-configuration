@@ -1,25 +1,25 @@
 #editor {
   .modal-open.modal {
-    padding-right: 0px!important;// delete in future?
+    padding-right: 0 !important;// delete in future?
   }
 
   .modal.show {
-    padding-right: 0px!important;// delete in future?
+    padding-right: 0 !important;// delete in future?
   }
 
   .modal-dialog {
     margin: 0;
     width: 100%;
     @media (min-width: 576px) {
-      max-width: none!important;
+      max-width: none !important;
     }
 
     .modal-content {
       display: flex;
       flex-direction: column;
       align-items: center;
-      border-bottom-right-radius: 0;
       border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
       @media (min-width: 992px) {
         height: 100vh;
       }
@@ -27,13 +27,15 @@
 
     .modal-header {
       display: flex;
-      width: 100%;
       justify-content: space-between;
+      width: 100%;
+
       h5 {
         @media (min-width: 992px) {
           font-size: 2.5rem;
         }
       }
+
       span {
         @media (min-width: 992px) {
           font-size: 2.5rem;
@@ -45,42 +47,52 @@
       display: flex;
       width: 95%;
       @media (min-width: 468px) {
-        width: 80%;
         justify-content: center;
+        width: 80%;
       }
       @media (max-width: 992px) {
         flex-direction: column-reverse;
       }
     }
+
     .event-form {
       display: flex;
       flex-direction: column;
       flex-grow: 0.7;
+
       .controls {
         margin-bottom: 0.5rem;
         padding: 1.5rem;
       }
+
       .event-content {
         display: flex;
+        flex-direction: column;
         padding: 1.5rem;
         padding-top: 0.2rem;
-        flex-direction: column;
-        input, textarea {
+
+        input,
+        textarea {
           margin-bottom: 1rem;
           padding: 0.5rem;
-          border: 1px solid silver;
+          border: 1px solid $silver;
           border-radius: 5px;
         }
-        input.name-field, input.place-field {
-          @media (max-width: 399px) {
-            width: 70%;
-          }
-          @media (min-width: 400px) {
-            width: 15rem;
+
+        input {
+          .name-field,
+          .place-field {
+            @media (max-width: 399px) {
+              width: 70%;
+            }
+            @media (min-width: 400px) {
+              width: 15rem;
+            }
           }
         }
       }
     }
+
     .authors {
       padding: 0.5rem;
       padding-left: 1.5rem;
@@ -89,29 +101,30 @@
       }
 
       .authors-list {
-        margin: 0;
-        padding: 0;
         display: flex;
         flex-direction: column;
+        margin: 0;
+        padding: 0;
         @media (max-width: 992px) {
           flex-direction: row;
-          justify-content: space-around;
           flex-wrap: wrap;
           align-items: center;
+          justify-content: space-around;
         }
+
         li {
           margin-bottom: 0.4rem;
           padding: 0.4rem;
           text-align: center;
-          list-style-type: none;
-          border: 1px solid silver;
+          border: 1px solid $silver;
           border-radius: 0.5rem;
+          list-style-type: none;
         }
       }
     }
   }
-  .modal-backdrop.show {
-    display: none!important;
-  }
 
+  .modal-backdrop.show {
+    display: none !important;
+  }
 }
