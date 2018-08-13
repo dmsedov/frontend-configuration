@@ -55,13 +55,31 @@ $basisWidth: 100%;
 
 .user-rights {
   label {
+    position: relative;
     display: inline-block;
     width: 18px;
     height: 18px;
+    box-sizing: border-box;
     border-radius: 9px;
-    background-color: blue;
+    background-color: $white;
+    border: 4px solid $blue;
+
+    .checked {
+      position: absolute;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      background-color: $silver;
+    }
   }
+
+  input {
+    &[type='radio'] {
+      display: none;
+    }
   }
+}
 
 .form-controls {
   margin-top: 1.5rem;
