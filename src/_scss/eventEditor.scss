@@ -20,6 +20,9 @@
       align-items: center;
       border-bottom-right-radius: 0;
       border-bottom-left-radius: 0;
+      @media (min-width: 992px) {
+        height: 100vh;
+      }
     }
 
     .modal-header {
