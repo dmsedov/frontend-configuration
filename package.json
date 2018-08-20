@@ -9,7 +9,10 @@
     "build": "webpack --mode production ./src/index.js --output ./public/main.js",
     "test": "jest --colors"
   },
-  "keywords": ["react", "redux"],
+  "keywords": [
+    "react",
+    "redux"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -55,6 +58,7 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
     "redux": "^4.0.0",
     "redux-actions": "^2.4.0",
     "redux-form": "^7.4.2",
