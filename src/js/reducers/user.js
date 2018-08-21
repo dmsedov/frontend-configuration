@@ -1,30 +1,29 @@
 import { handleActions } from 'redux-actions';
-import * as actions from '../actions/authActions';
+import * as actions from '../actions/auth';
+const sessionData = JSON.parse(window.localStorage.getItem('rr_user'));
+const defaultState  = { name: null, isAuthenticated: false };
+const initialState =  sessionData || defaultState;
 
-const initialState = JSON.parse(window.localStorage.getItem('rr_user')) || {};
 
-
-export const fetchLoginRequest = createAction('LOGIN_FETCH_REQUEST');
-export const fetchLoginSuccess = createAction('LOGIN_FETCH_SUCCESS');
-export const fetchLoginFailed = createAction('LOGIN_FETCH_FAILURE');
-
-export const removeSessionRequest = createAction('LOGOUT_FETCH_REQUEST');
-export const removeSessionSuccess = createAction('LOGOUT_FETCH_SUCCESS');
-export const removeSessionFailed = createAction('LOGOUT_FETCH_FAILURE');
-
-const userCreatingState = handleActions({
-  [actions.fetchLoginRequest](state, { payload }) {
+const user = handleActions({
+  [actions.loginRequest](state, { payload }) {
     return state;
   },
-  [actions.fetchLoginSuccess](state, { payload }) {
-    return { ...state, name: payload.name, isAuthenticated: payload.isAuthenticated };
+  [actions.loginSuccess](state, { payload: { name, isAuthenticated } }) {
+    return { ...state, name, isAuthenticated };
   },
-  [actions.fetchLoginFailed](state, { payload }) {
+  [actions.loginFailure](state, { payload }) {
     return state;
   },
-  [removeSessionSuccess](state, { payload }) {
+  [actions.logoutRequest](state, { payload }) {
+    return state;
+  },
+  [actions.logoutSuccess](state, { payload }) {
+    return state;
+  },
+  [actions.logoutFailure](state, { payload }) {
     return state;
   },
 }, initialState);
 
-export { userCreatingState };
+export { user };

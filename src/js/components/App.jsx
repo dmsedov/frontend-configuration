@@ -1,10 +1,12 @@
 import React from 'react';
 
-export const App = (props) => { // eslint-disable-line
-  const { children } = props;
-  return (
-    <div className="content">
-      {children}
-    </div>
-  );
-};
+export default class App extends React.Component {
+  render() {
+    const { children } = props;
+    return (
+      <div className="content">
+        {children}
+      </div>
+    );
+  }
+}

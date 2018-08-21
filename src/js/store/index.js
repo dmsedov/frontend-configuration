@@ -10,7 +10,7 @@ export default reducers =>
     createStore(
       reducers,
       compose(
-        applyMiddleware(thunkMiddleware),
+        applyMiddleware(thunk),
         devtoolMiddleware,
       )
     );
