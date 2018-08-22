@@ -2,15 +2,6 @@ import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 
 export default class Calendar extends React.Component {
-  // componentWillMount() {
-  //   const { isAuthenticated, redirectToUrl } = this.props;
-  //   console.log('componentWillMount');
-  //   if (!isAuthenticated) {
-  //     console.log('redirect');
-  //
-  //   }
-  // }
-
   renderCalendar() {
     const { name } = this.props;
 
@@ -40,17 +31,8 @@ export default class Calendar extends React.Component {
   }
 
   render() {
-    const { isAuthenticated } = this.props;
+    const { user: { isAuthenticated } } = this.props;
 
     return isAuthenticated ? this.renderCalendar() : <Redirect to="/login" />;
   }
 }
-// <Link to="/login">Logout</Link>
-// <ul>
-//   <li>
-//     <a>Admin</a>
-//   </li>
-//   <li>
-//     <Link to="/login">Log Out</Link>
-//   </li>
-// </ul>

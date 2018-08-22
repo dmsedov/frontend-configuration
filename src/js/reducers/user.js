@@ -1,8 +1,9 @@
 import { handleActions } from 'redux-actions';
 import * as actions from '../actions/auth';
+
 const sessionData = JSON.parse(window.localStorage.getItem('rr_user'));
-const defaultState  = { name: null, isAuthenticated: false };
-const initialState =  sessionData || defaultState;
+const defaultState = { name: null, isAuthenticated: false };
+const initialState = sessionData || defaultState;
 
 
 const user = handleActions({
@@ -26,4 +27,4 @@ const user = handleActions({
   },
 }, initialState);
 
-export { user };
+export default user;

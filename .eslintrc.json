@@ -37,6 +37,7 @@
         ]
       }
     }],
+    "react/prefer-stateless-function": "off",
     "react/destructuring-assignment": "warn",
     "react/jsx-one-expression-per-line": "off",
     "react/prop-types": "off",

@@ -3,11 +3,7 @@ import Component from '../components/LoginPage';
 import * as actionCreators from '../actions/auth';
 
 
-function mapStateToProps() {
-  return {
-
-  };
-}
+const mapStateToProps = state => state;
 
 const Container = connect(
   mapStateToProps,
