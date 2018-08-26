@@ -6,15 +6,23 @@ header {
     width: 100%;
     height: inherit;
     z-index: 1500;
+    @media (min-width: 1366px) {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   .navbar-expand-lg {
     position: relative;
+    background-color: inherit;
+    @media (min-width: 1366px) {
+      width: 1230px;
+    }
   }
 
   .search {
     position: absolute;
-    top: 0.6rem;
+    top: .6rem;
     right: 6rem;
     width: 32px;
     height: 32px;
@@ -31,8 +39,14 @@ header {
 }
 
 main {
+  .content {
+    @media (min-width: 1366px) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
   .calendar {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,9 +97,7 @@ main {
       flex-direction: column;
       align-items: center;
     }
-    @media (max-width: 667px) {
-      width: 90%;
-    }
+
     @media (min-width: 668px) AND (max-width: 991px) {
       width: 600px;
     }
@@ -119,7 +131,12 @@ main {
     .day-of-week {
       position: absolute;
       top: 0;
-      left: 0.2rem;
+      left: .2rem;
+
+      .name {
+        display: block;
+        font-size: 1rem;
+      }
 
       .number {
         display: block;
@@ -128,11 +145,6 @@ main {
 
       .number.active {
         color: $red;
-      }
-
-      .name {
-        display: block;
-        font-size: 1rem;
       }
     }
 
