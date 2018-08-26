@@ -1,162 +1,160 @@
 header {
   height: 3.5rem;
+}
 
-  .menu-position {
-    position: fixed;
-    width: 100%;
-    height: inherit;
-    z-index: 1500;
-    @media (min-width: 1366px) {
-      display: flex;
-      justify-content: center;
-    }
-  }
-
-  .navbar-expand-lg {
-    position: relative;
-    background-color: inherit;
-    @media (min-width: 1366px) {
-      width: 1230px;
-    }
-  }
-
-  .search {
-    position: absolute;
-    top: .6rem;
-    right: 6rem;
-    width: 32px;
-    height: 32px;
-    background-image: url('/src/images/icons/search.png');
-  }
-
-  .modal {
-    z-index: 1600;
-  }
-
-  .modal-content {
-    top: 3.5rem;
+.menu-position {
+  position: fixed;
+  width: 100%;
+  height: inherit;
+  z-index: 1500;
+  @media (min-width: 1366px) {
+    display: flex;
+    justify-content: center;
   }
 }
 
-main {
-  .content {
-    @media (min-width: 1366px) {
-      display: flex;
-      justify-content: center;
+.navbar-expand-lg {
+  position: relative;
+  background-color: inherit;
+  @media (min-width: 1366px) {
+    width: 1230px;
+  }
+}
+
+.search {
+  position: absolute;
+  top: .6rem;
+  right: 6rem;
+  width: 32px;
+  height: 32px;
+  background-image: url('/src/images/icons/search.png');
+}
+
+.modal {
+  z-index: 1600;
+}
+
+.modal-content {
+  top: 3.5rem;
+}
+
+.content {
+  @media (min-width: 1366px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 2rem 0;
+  width: 300px;
+
+  .nav-arrow {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
+    &.left {
+      background-image: url('/src/images/icons/left-arrow.png');
+    }
+
+    &.right {
+      background-image: url('/src/images/icons/right-arrow.png');
     }
   }
 
-  .calendar {
-    display: flex;
+  .date {
+    font-size: 1.2rem;
+  }
+
+  .add-event-btn {
+    position: fixed;
+    right: 2%;
+    bottom: 5%;
+    width: 50px;
+    height: 50px;
+    background: url('/src/images/icons/add-event-btn.png');
+    cursor: pointer;
+    z-index: 1500;
+  }
+}
+
+.days {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  @media (max-width: 991px) {
     flex-direction: column;
     align-items: center;
   }
 
-  .controls {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin: 2rem 0;
-    width: 300px;
+  @media (min-width: 668px) AND (max-width: 991px) {
+    width: 600px;
+  }
+  @media (min-width: 1366px) {
+    width: 1230px;
+  }
+}
 
-    .nav-arrow {
-      width: 40px;
-      height: 40px;
-      cursor: pointer;
-
-      &.left {
-        background-image: url('/src/images/icons/left-arrow.png');
-      }
-
-      &.right {
-        background-image: url('/src/images/icons/right-arrow.png');
-      }
-    }
-
-    .date {
-      font-size: 1.2rem;
-    }
-
-    .add-event-btn {
-      position: fixed;
-      right: 2%;
-      bottom: 5%;
-      width: 50px;
-      height: 50px;
-      background: url('/src/images/icons/add-event-btn.png');
-      cursor: pointer;
-      z-index: 1500;
-    }
+.day {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  padding-left: 2rem;
+  width: 80%;
+  height: 200px;
+  font-size: 12px;
+  border: 1px solid $silver;
+  @media (max-width: 991px) {
+    height: 300px;
+    font-size: 1rem;
+  }
+  @media (min-width: 992px) {
+    width: 14%;
   }
 
-  .days {
-    display: flex;
-    flex-wrap: wrap;
-    width: 90%;
-    @media (max-width: 991px) {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    @media (min-width: 668px) AND (max-width: 991px) {
-      width: 600px;
-    }
-    @media (min-width: 1366px) {
-      width: 1230px;
-    }
+  &.not-current {
+    background-color: $darkgrey;
   }
 
-  .day {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
-    padding-left: 2rem;
-    width: 80%;
-    height: 200px;
-    font-size: 12px;
-    border: 1px solid $silver;
-    @media (max-width: 991px) {
-      height: 300px;
+  .day-of-week {
+    position: absolute;
+    top: 0;
+    left: .2rem;
+
+    .name {
+      display: block;
       font-size: 1rem;
     }
-    @media (min-width: 992px) {
-      width: 14%;
+
+    .number {
+      display: block;
+      font-size: 1.5rem;
     }
 
-    &.not-current {
-      background-color: $darkgrey;
+    .number.active {
+      color: $red;
     }
+  }
 
-    .day-of-week {
-      position: absolute;
-      top: 0;
-      left: .2rem;
+  .content {
+    padding-left: 1rem;
+    height: 90%;
+    overflow-y: hidden;
 
-      .name {
-        display: block;
-        font-size: 1rem;
-      }
-
-      .number {
-        display: block;
-        font-size: 1.5rem;
-      }
-
-      .number.active {
-        color: $red;
-      }
-    }
-
-    .content {
-      padding-left: 1rem;
-      height: 90%;
-      overflow-y: hidden;
-
-      .events {
-        margin: 0;
-        padding: 0;
-      }
+    .events {
+      margin: 0;
+      padding: 0;
     }
   }
 }
