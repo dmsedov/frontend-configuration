@@ -6,9 +6,35 @@ body {
 
   }
 
-  main {
-    
+
+    .auth-service {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+
+  .btn {
+    position: relative;
+    margin-bottom: .5rem;
+    width: 190px;
+    height: 40px;
+    color: black;
+    text-align: center;
+    border: 1px solid silver;
+
+    &::before {
+      position: absolute;
+      top: 5%;
+      left: 10%;
+    }
   }
+
+  .btn.google-social {
+    &::before {
+      content: url('/src/images/icons/google-32px.png');
+    }
+  }
+  }
+
 
   footer {
 
