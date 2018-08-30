@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "./node_modules/eslint/bin/eslint.js src",
-    "dev": "webpack-dev-server --open --mode development",
+    "dev": "webpack-dev-server --mode development",
     "build": "webpack --mode production ./src/index.js --output ./public/main.js",
     "test": "jest --colors"
   },
@@ -50,6 +50,7 @@
     "yargs": "^12.0.0"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.0.0",
     "axios": "^0.18.0",
     "bootstrap": "^4.1.1",
     "jquery": "^3.3.1",
@@ -57,10 +58,13 @@
     "popper.js": "^1.14.3",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-facebook-login": "^4.0.1",
     "react-google-login": "^3.2.1",
     "react-redux": "^5.0.7",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
+    "react-vk": "^2.1.4",
+    "react-vk-login": "0.0.2",
     "redux": "^4.0.0",
     "redux-actions": "^2.4.0",
     "redux-form": "^7.4.2",

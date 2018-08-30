@@ -1,5 +1,6 @@
 import React from 'react';
 import GoogleLogin from 'react-google-login';
+import FacebookLogin from 'react-facebook-login';
 
 export default class LoginPage extends React.Component {
   successRespGoogle = (resp) => {
@@ -9,8 +10,16 @@ export default class LoginPage extends React.Component {
     this.props.login({ name: ig, history });
   }
 
-  faliedRespGoogle = (resp) => {
+  failedRespGoogle = (resp) => {
     console.log(resp, 'failed resp');
+  }
+
+  successRespFb = (resp) => {
+    console.log(resp, 'resp from Fb');
+    // const { first_name, last_name } = resp;
+    // const fullName = `${first_name} ${last_name}`;
+    // const { history } = this.props;
+    // this.props.login({ name: fullName, history });
   }
 
   render() {
@@ -21,17 +30,16 @@ export default class LoginPage extends React.Component {
           buttonText="Google"
           className="btn google-social"
           onSuccess={this.successRespGoogle}
-          Failure={this.faliedRespGoogle}
+          Failure={this.failedRespGoogle}
         />
+        <FacebookLogin
+          appId="318427492263139"
+          fields="name,email,picture"
+          callback={this.successRespFb}
+          cssClass="btn facebook-social"
+        />
+
       </div>
-      // <div className="row">
-      //   <div className="col-md-12">
-      //     <form className="form-inline" onSubmit={this.handleSubmit}>
-      //       <input className="form-control" type="text" placeholder="login" />
-      //       <button className="btn btn-primary" type="submit">Войти</button>
-      //     </form>
-      //   </div>
-      // </div>
     );
   }
 }
