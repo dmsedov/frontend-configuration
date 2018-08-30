@@ -5,9 +5,9 @@ import FacebookLogin from 'react-facebook-login';
 export default class LoginPage extends React.Component {
   successRespGoogle = (resp) => {
     console.log(resp);
-    const { w3: { ig } } = resp;
+    const { profileObj: { name } } = resp;
     const { history } = this.props;
-    this.props.login({ name: ig, history });
+    this.props.login({ name, history });
   }
 
   failedRespGoogle = (resp) => {
@@ -16,10 +16,9 @@ export default class LoginPage extends React.Component {
 
   successRespFb = (resp) => {
     console.log(resp, 'resp from Fb');
-    // const { first_name, last_name } = resp;
-    // const fullName = `${first_name} ${last_name}`;
-    // const { history } = this.props;
-    // this.props.login({ name: fullName, history });
+    const { name } = resp;
+    const { history } = this.props;
+    this.props.login({ name, history });
   }
 
   render() {
@@ -36,6 +35,7 @@ export default class LoginPage extends React.Component {
           appId="318427492263139"
           fields="name,email,picture"
           callback={this.successRespFb}
+          textButton="Facebook"
           cssClass="btn facebook-social"
         />
 
