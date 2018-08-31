@@ -11,15 +11,13 @@ export const logoutFailure = createAction('LOGOUT_FAILURE');
 export const redirectToUrl = createAction('REDIRECT_TO_URL');
 
 export const login = ({ name, history }) => (dispatch) => {
-  dispatch(loginRequest({}));
-
-  setTimeout(() => {
-    dispatch(loginSuccess({
-      name,
-      isAuthenticated: true,
-    }));
-    history.replace('/');
-  }, 2000);
+  // dispatch(loginRequest({}));
+  localStorage.setItem('user', name);
+  history.replace('/');
+  dispatch(loginSuccess({ isAuthenticated: true }));
+  // setTimeout(() => {
+  //
+  // }, 2000);
 };
 
 // export const logout = () => removeSessionSuccess({});

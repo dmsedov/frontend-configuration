@@ -1,21 +1,29 @@
 import React from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default class Calendar extends React.Component {
-  renderCalendar() {
-    const { name } = this.props.user;
+  handleLogOut = (e) => {
+    e.preventDefault();
+    localStorage.removeItem('user');
+    const { history } = this.props;
+    console.log(history, 'historu');
+    history.replace('/login');
+  }
+
+  render() {
+    const userName = localStorage.getItem('user');
 
     return (
       <div className="calendar">
         <header>
-          <h2>Welcome {name}</h2>
+          <h2>Welcome {userName}</h2>
           <nav>
             <ul>
               <li>
                 <a>Edit</a>
               </li>
               <li>
-                <Link to="/login" replace>Logout</Link>
+                <a href="#" onClick={this.handleLogOut}>Logout</a>
               </li>
             </ul>
           </nav>
@@ -28,11 +36,5 @@ export default class Calendar extends React.Component {
         </footer>
       </div>
     );
-  }
-
-  render() {
-    const { user: { isAuthenticated } } = this.props;
-    console.log('calendear redirect ');
-    return isAuthenticated ? this.renderCalendar() : <Redirect to="/login" />;
   }
 }

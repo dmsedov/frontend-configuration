@@ -10,8 +10,8 @@ const user = handleActions({
   [actions.loginRequest](state, { payload }) {
     return state;
   },
-  [actions.loginSuccess](state, { payload: { name, isAuthenticated } }) {
-    return { ...state, name, isAuthenticated };
+  [actions.loginSuccess](state, { payload: { isAuthenticated } }) {
+    return { ...state, isAuthenticated };
   },
   [actions.loginFailure](state, { payload }) {
     return state;
