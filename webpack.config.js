@@ -43,7 +43,7 @@ const config = {
       chunkFilename: '[id].css',
     }),
     new HtmlWebpackPlugin({
-      template: './src/html/index.html',
+      template: './src/html/popupEntites.html',
     }),
   ],
   optimization: isProduction ? {
@@ -62,7 +62,7 @@ const config = {
     ],
   } : {},
   devServer: {
-    port: 3000,
+    port: 4000,
     compress: true,
     open: true,
   },
