@@ -1,10 +1,6 @@
-#editor {
-  .modal-open.modal {
-    padding-right: 0 !important;// delete in future?
-  }
-
-  .modal.show {
-    padding-right: 0 !important;// delete in future?
+#event-editor {
+  &.modal {
+    justify-content: center;
   }
 
   .modal-dialog {
@@ -12,6 +8,9 @@
     width: 100%;
     @media (min-width: 576px) {
       max-width: none !important;
+    }
+    @media (min-width: 992px) {
+      width: 992px;
     }
 
     .modal-content {
@@ -58,10 +57,10 @@
     .event-form {
       display: flex;
       flex-direction: column;
-      flex-grow: 0.7;
+      flex-grow: .7;
 
       .controls {
-        margin-bottom: 0.5rem;
+        margin-bottom: .5rem;
         padding: 1.5rem;
       }
 
@@ -69,32 +68,30 @@
         display: flex;
         flex-direction: column;
         padding: 1.5rem;
-        padding-top: 0.2rem;
+        padding-top: .2rem;
 
         input,
         textarea {
           margin-bottom: 1rem;
-          padding: 0.5rem;
+          padding: .5rem;
           border: 1px solid $silver;
           border-radius: 5px;
         }
 
-        input {
-          .name-field,
-          .place-field {
-            @media (max-width: 399px) {
-              width: 70%;
-            }
-            @media (min-width: 400px) {
-              width: 15rem;
-            }
+        .name-field,
+        .place-field {
+          @media (max-width: 399px) {
+            width: 70%;
+          }
+          @media (min-width: 400px) {
+            width: 15rem;
           }
         }
       }
     }
 
     .authors {
-      padding: 0.5rem;
+      padding: .5rem;
       padding-left: 1.5rem;
       @media (max-width: 992px) {
         margin-bottom: 1rem;
@@ -113,11 +110,11 @@
         }
 
         li {
-          margin-bottom: 0.4rem;
-          padding: 0.4rem;
+          margin-bottom: .4rem;
+          padding: .4rem;
           text-align: center;
           border: 1px solid $silver;
-          border-radius: 0.5rem;
+          border-radius: .5rem;
           list-style-type: none;
         }
       }
